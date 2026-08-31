@@ -41,11 +41,91 @@ Result
 ```
 
 Just remember:
-Python source code is executed by the Python runtime; Python isn't simply "compiled directly to machine code" in the same way as traditional compiled languages.
+Python source code is executed by the Python runtime. Python isn't simply "compiled directly to machine code" in the same way as traditional compiled languages.
 .py -> Python interpreter/runtime -> execution
 
 
+3. First Python Program
 
+```python
+print("Hello, AI Engineering!")
+```
 
+4. Variables
 
+```python
+name = "Amritanshu"
+age = 25
+```
 
+In python school of thoughts, variables can be understood as names/ references pointing to the objects.
+Or in simple words you can understand it as variables are in stack and pointing to its value in Heap.
+
+Think:
+```
+name
+  │
+  ▼
+┌──────────────┐
+│ "Amritanshu" │
+│    object    │
+└──────────────┘
+```
+
+So, name = "Amritanshu" means approximately:
+Create/find the string object "Amritanshu" and bind the name name to it.
+
+5. Python Variables Don't Have Fixed Types
+
+```python
+x=10
+x="hello"
+x=3.14
+```
+The name x doesn't have a permanent type.
+The object has a type.
+This is one of the most important ideas in Python.
+
+6. What Does "Dynamically Typed" Mean?
+
+x=10
+Python knows: 10-> int
+
+x="Hello"
+Python knows: "Hello"-> str
+
+So the type associated with the object can change as the name gets rebound.
+
+Compare that with a statically typed language such as Java:
+int x = 10;
+
+You generally can't then do:
+x = "hello";
+
+7. type() — Your First Useful Tool
+
+```python
+type()
+```
+
+8. Python's Fundamental Data Types
+
+For now, the focus will be on the following:
+```
+| Type       | Example   |
+| ---------- | --------- |
+| `int`      | `10`      |
+| `float`    | `10.5`    |
+| `str`      | `"hello"` |
+| `bool`     | `True`    |
+| `NoneType` | `None`    |
+```
+Later the focus will be on: list, tuple, set, dict
+
+9. Integers
+Python integers can become extremely large.
+
+For example:
+number = 999999999999999999999999999999999999999
+
+Python can handle this without the fixed-size integer limitations you may have encountered in languages such as JavaScript.
