@@ -439,3 +439,69 @@ state
 LangGraph state
 shared data
 concurrency
+
+#### 19. Mutable vs Immutable
+
+This is one of the most important Python concepts we'll build on.
+
+Immutable objects
+Examples:
+```
+int
+float
+bool
+str
+tuple
+```
+Once created, their value can't be modified in place.
+
+Mutable objects
+Examples:
+```
+list
+dict
+set
+```
+Their contents can change.
+
+Example:
+```python
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+```
+
+Output:
+```python
+[1, 2, 3, 4]
+```
+The same list object was modified.
+
+#### 20. Why This Matters for LangGraph
+
+This may seem far away right now.
+It's not.
+LangGraph revolves heavily around state.
+
+You might eventually see something conceptually like:
+```python
+state = {
+    "messages": [],
+    "documents": [],
+    "answer": None
+}
+```
+A node modifies or returns state.
+
+If you don't understand:
+```
+objects
+references
+mutability
+copying
+```
+you can easily create subtle bugs in agent workflows.
+
+That's why we're learning this now.
+
+
