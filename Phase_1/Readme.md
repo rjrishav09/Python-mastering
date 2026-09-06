@@ -129,3 +129,139 @@ For example:
 number = 999999999999999999999999999999999999999
 
 Python can handle this without the fixed-size integer limitations you may have encountered in languages such as JavaScript.
+
+#### 10. Float
+
+```python
+temperature = 0.7
+print(type(temperature))
+```
+Output:
+```python
+<class 'float'>
+```
+This becomes familiar later when working with LLM parameters.
+
+#### 11. Strings
+Another data type in python where you work with words.
+
+```python
+name="Amritanshu"
+print(name)
+print(type(name))
+
+name="Hello"
+print(name, type(name))
+```
+
+Output
+```python
+Amritanshu
+<class 'str'>
+Hello <class 'str'>
+```
+
+Strings can be concanated.
+Example:
+```python
+first_name = "Amritanshu"
+last_name = "Goutam"
+
+full_name = first_name + " " + last_name
+
+print(full_name)
+print(type(full_name))
+```
+Output:
+```python
+Amritanshu Goutam
+<class 'str'>
+```
+
+#### 12. f-Strings
+This ```python f"..." ``` is called an f-string.
+
+```python
+name = "Amritanshu"
+age = 25
+print(f"My name is {name} and I am {age} years old.")
+```
+
+Output:
+```python
+My name is Amritanshu and I am 25 years old.
+```
+
+You can put expressions inside {}:
+```python
+a = 10
+b = 20
+
+print(f"Sum = {a + b}")
+```
+
+Output:
+```python
+Sum = 30
+```
+We will use this constantly in:
+
+logging
+prompt construction
+API responses
+debugging
+application code
+
+#### 13. Boolean
+
+Python has: True and False Values
+
+Notice the capital letters.
+
+Correct:
+```python
+is_authenticated = True
+```
+
+Incorrect:
+```python
+is_authenticated = true
+```
+
+#### 14. None
+
+None means approximately:
+```python
+result = None
+```
+There is currently no value / absence of a value.
+
+
+Example"
+```python
+response = None
+
+if response is None:
+    print("No response yet")
+```
+
+Output:
+```python
+No response yet
+```
+
+Notice something important:
+We use:
+```python
+is None
+```
+rather than:
+```python
+== None
+```
+
+Prefer:
+```python
+if response is None:
+```
+We'll later understand identity vs equality.
