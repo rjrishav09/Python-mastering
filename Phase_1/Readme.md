@@ -432,6 +432,7 @@ b
 You didn't create a new list.
 
 This concept will become extremely important when we study:
+```
 mutable vs immutable objects
 function arguments
 classes
@@ -439,6 +440,7 @@ state
 LangGraph state
 shared data
 concurrency
+```
 
 #### 19. Mutable vs Immutable
 
@@ -505,3 +507,246 @@ you can easily create subtle bugs in agent workflows.
 That's why we're learning this now.
 
 
+#### 21. Python Collections
+
+Now let's get a preview.
+
+#### List
+Ordered and mutable:
+```python
+documents = [
+    "doc1",
+    "doc2",
+    "doc3"
+]
+```
+
+Access:
+```python
+print(documents[0])
+```
+
+Output:
+```python
+doc1
+```
+
+
+#### Tuple
+Ordered and immutable:
+```python
+coordinates = (17.3850, 78.4867)
+```
+
+#### Set
+Unique values:
+
+```python
+skills = {
+    "Python",
+    "FastAPI",
+    "Python"
+}
+```
+
+Result conceptually:
+```python
+{"Python", "FastAPI"}
+```
+
+#### Dictionary
+
+Key-value structure:
+```python
+user = {
+    "name": "Amritanshu",
+    "role": "GenAI Engineer",
+    "experience": 2
+}
+```
+
+Access:
+```python
+print(user["role"])
+```   
+
+Output:
+```python
+GenAI Engineer
+```
+
+Dictionaries will become extremely important in your AI journey.
+You'll constantly encounter things like:
+```python
+state = {
+    "messages": [],
+    "context": [],
+    "user_query": "...",
+    "answer": None
+}
+```
+
+#### 22. Your First AI-Style Python Example
+
+Let's combine till now learned concepts.
+```python
+user = {
+    "name": "Amritanshu",
+    "role": "GenAI Engineer",
+    "skills": ["Python", "FastAPI", "LangGraph"],
+    "active": True
+}
+
+print(f"User: {user['name']}")
+print(f"Role: {user['role']}")
+print(f"Skills: {user['skills']}")
+```
+
+Output:
+```
+User: Amritanshu
+Role: GenAI Engineer
+Skills: ['Python', 'FastAPI', 'LangGraph']
+```
+
+Notice how many fundamental concepts are already involved:
+```
+dictionary
+list
+string
+boolean
+variable
+f-string
+indexing
+```
+That's how we'll learn.
+
+
+#### 23. Mental Model
+
+```python
+                 PYTHON
+                    │
+             ┌──────┴──────┐
+             │             │
+           Names         Objects
+             │             │
+             └──────┬──────┘
+                    │
+                References
+                    │
+             ┌──────┴──────┐
+             │             │
+        Immutable       Mutable
+             │             │
+      int, str,       list, dict,
+      float, tuple    set
+
+And
+==  → equality
+is  → identity
+
+```
+
+### Your Excersises
+
+Write the code yourself.
+
+#### Exercise 1 — Variables
+
+Create variables for:
+```python
+name
+age
+role
+experience
+is_learning_python
+```
+
+Print each one and its type.
+
+#### Exercise 2 — Type Changes
+
+Create:
+```python
+x = 100
+```
+
+Then change it to:
+```python
+x = "Python"
+```
+
+Then:
+```python
+x = 3.14
+```
+
+After every assignment, print:
+```python
+type(x)
+```
+
+Explain why Python allows this.
+
+
+#### Exercise 3 — Identity
+
+Write:
+```python
+a = [1, 2, 3]
+b = a
+```
+
+Then:
+```python
+b.append(4)
+```
+
+Print both:
+```python
+a
+b
+```
+
+Then explain why both changed.
+
+
+#### Exercise 4 — Equality vs Identity
+
+Create two lists:
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+```
+
+Check:
+```python
+a == b
+a is b
+```
+Predict the results before running the code.
+Then explain why the results differ.
+
+
+#### Exercise 5 — AI-Oriented Dictionary
+
+Create:
+```python
+agent_state = {
+    "user_query": "...",
+    "messages": [],
+    "documents": [],
+    "answer": None,
+    "completed": False
+}
+```
+
+Then:
+```
+Add a message.
+Add a document.
+Set an answer.
+Set completed to True.
+Print the final state.
+```
