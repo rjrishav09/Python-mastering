@@ -215,3 +215,285 @@ Output:
 ```
 15
 ```
+
+### 8. Comparison Operators
+Now we reach something extremely important and which we encouter daily.
+
+```
+==     Equal
+!=     Not equal
+>      Greater than
+<      Less than
+>=     Greater than or equal
+<=     Less than or equal
+```
+
+These produce booleans.
+```
+True
+False
+```
+
+Example:
+```
+age = 22
+print(age >= 18)
+```
+
+Output:
+```
+True
+```
+This is the beginning of decision-making.
+
+### 9. == 
+
+Remember:
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+print(a == b)
+```
+
+Output:
+```
+True
+```
+Because their equality comparison says they're equal.
+
+But:
+```python
+print(a is b)
+```
+is:
+```
+False
+```
+Keep these separate.
+
+
+### 10. Expressions
+
+An expression is something Python can evaluate to produce a result.
+
+For example:
+```
+10+5
+```
+is an expression.
+
+So is:
+```python
+age >= 18
+```
+
+And:
+```python
+name == "Amritanshu"
+temperature > 0.5
+```
+
+For example:
+```python
+age= 22
+result = age >= 18
+print(result)
+```
+
+Output:
+```
+True
+```
+
+### 11. Logical Operators
+
+Now we combine conditions.
+Python gives us:
+```
+and
+or
+not
+```
+
+and: Both Conditions must be true to produce True
+```python
+age=22
+has_started=True
+print(age>=18 and has_started)
+```
+
+Think:
+```
+Condition A AND Condition B
+
+True AND True   → True
+True AND False  → False
+False AND True  → False
+False AND False → False
+```
+
+### 12. or
+Atleast one condition is true.
+
+```python
+is_admin = False
+is_owner = True
+
+print(is_admin or is_owner)
+```
+
+Output:
+```
+True
+```
+
+### 13. not
+
+Reverses Boolean truth.
+```python
+is_authenticated = True
+print(not is_authenticated)
+```
+
+Output:
+```
+False
+```
+
+### 14. Conditionals
+Now we finally make Python make decisions.
+
+Syntax:
+```python
+if condition:
+    # execute this
+```
+
+Example:
+```python
+age = 22
+if age >= 18:
+    print("Adult")
+```
+Output:
+```
+Adult
+```
+Notice the colon:
+```python
+if age >= 18:
+```
+and indentation:
+```python
+    print("Adult")
+```
+Python uses indentation as part of its syntax.
+
+
+### 15. if + else
+
+```python
+age = 16
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+```
+Output:
+```
+Minor
+```
+
+Mental model:
+```
+          age >= 18?
+           /      \
+         YES       NO
+          ↓         ↓
+       Adult      Minor
+```
+
+### 16. elif
+Suppose:
+```python
+score = 75
+```
+
+We can write:
+```python
+if score >= 90:
+    print("A")
+elif score >= 75:
+    print("B")
+elif score >= 60:
+    print("C")
+else:
+    print("D")
+```
+Output:
+```
+B
+```
+
+Python checks conditions from top to bottom.
+Once it finds a true condition, that branch executes and the remaining elif branches are skipped.
+
+### 17. Truthiness
+
+This is one of the most important Python concepts.
+Python doesn't require conditions to literally be:
+```
+True
+False
+```
+
+For example:
+```python
+name = "Amritanshu"
+if name:
+    print("Name exists")
+```
+This works.
+
+Why?
+Because a non-empty string is considered truthy.
+
+### 18. Falsy Values
+Some common falsy values are:
+```
+False
+None
+0
+0.0
+""
+[]
+{}
+set()
+()
+```
+
+For example:
+```python
+if "":
+    print("True")
+else:
+    print("False")
+```
+
+Output:
+```
+False
+```
+
+```python
+if []:
+    print("Has items")
+else:
+    print("Empty list")
+```
+
+Output:
+```
+Empty List
+```
