@@ -14,4 +14,9 @@ Python allows this because it is a dynamically typed language.
 In dynamically typed languages, the type of a variable is determined at runtime
 based on the value assigned to it, rather than being explicitly declared by the programmer. 
 This means that a variable can hold values of different types at different times during the execution of a program.
+
+We're rebinding the name x.
+x = 100
+x = "Python"
+
 """
