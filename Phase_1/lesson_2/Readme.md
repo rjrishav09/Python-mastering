@@ -186,3 +186,32 @@ It doesn't mean:
 "x equals 10" in the mathematical sense
 ```
 
+### 7. Compound Assignment
+Instead of:
+```python
+x = x + 5
+```
+you can write:
+```python
+x += 5
+```
+Similarly:
+```python
+x -= 5
+x *= 5
+x /= 5
+x //= 5
+x %= 5
+x **= 5
+```
+Example:
+```python
+score = 10
+score += 5
+print(score)
+``` 
+
+Output:
+```
+15
+```
