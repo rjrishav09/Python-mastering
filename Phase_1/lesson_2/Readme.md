@@ -497,3 +497,91 @@ Output:
 ```
 Empty List
 ```
+
+### 19. Why Truthiness Matters in AI Engineering
+
+You'll eventually see code like:
+```python
+documents = retrieve_documents()
+if documents:
+    generate_answer(documents)
+else:
+    return "No relevant documents found."
+```
+
+Instead of:
+```python
+if len(documents) > 0:
+```
+Both can work.
+But Python developers commonly prefer:
+```python
+if documents:
+```
+because you're asking:
+"Does this collection contain anything?"
+
+This style becomes very natural once you understand truthiness.
+
+
+### 20. in — Membership Operator
+
+This is particularly useful with collections.
+```python
+skills = ["Python", "FastAPI", "LangGraph"]
+print("Python" in skills)
+```
+Output:
+```python
+True
+```
+And:
+```python
+print("Java" in skills)
+```
+Output:
+```python
+False
+```
+You can also use:
+```python
+"Java" not in skills
+```
+Result:
+```
+True
+```
+
+### 21. Membership with Dictionaries
+
+Interesting example:
+```python
+user = {
+    "name": "Amritanshu",
+    "role": "AI Engineer"
+}
+```
+Then:
+```python
+print("name" in user)
+```
+→
+True
+
+But:
+```python
+print("Amritanshu" in user)
+```
+→
+False
+
+Why? 
+Because dictionary membership checks keys by default.
+
+So:
+
+"name" in user
+
+means:
+
+Does the dictionary contain this key?
