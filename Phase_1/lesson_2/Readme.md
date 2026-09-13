@@ -162,3 +162,27 @@ Because:
 2³ = 8
 ```
 
+### 6. Assignment Operators
+
+We have been already been using:
+```
+x = 10
+```
+
+= means:
+Assign/bind this value to this name.
+It does not mean mathematical equality.
+
+This is important.
+```
+x = 10
+```
+means:
+```
+bind x to 10
+```
+It doesn't mean:
+```
+"x equals 10" in the mathematical sense
+```
+
