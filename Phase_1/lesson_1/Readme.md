@@ -1,6 +1,6 @@
 # Information
 
-This file will contain all the respective information about the phase 1.
+This file will contain all the respective information about the lesson 1 from phase 1.
 The focus will be on the "Python" specially Python for AI Engineers.
 
 ## Python
