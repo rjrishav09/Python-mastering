@@ -585,3 +585,57 @@ So:
 means:
 
 Does the dictionary contain this key?
+
+
+### 22. Control Flow
+
+So far we've seen:
+```python
+if
+elif
+else
+```
+These control which code executes.
+But we also need repetition.
+That's where loops come in.
+
+### 23. for Loop
+Suppose:
+```python
+skills = ["Python", "FastAPI", "LangGraph"]
+```
+
+We can write:
+```python
+for skill in skills:
+    print(skill)
+```
+
+Output:
+```
+Python
+FastAPI
+LangGraph
+```
+
+### 24. range()
+
+You can repeat something a certain number of times:
+```python
+for i in range(5):
+    print(i)
+```
+
+Output:
+```
+0
+1
+2
+3
+4
+```
+
+So it represents:
+```
+0, 1, 2, 3, 4
+```
