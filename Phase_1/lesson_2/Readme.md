@@ -639,3 +639,156 @@ So it represents:
 ```
 0, 1, 2, 3, 4
 ```
+
+### 25. while
+A while loop continues while a condition is true.
+```python
+count = 0
+
+while count < 5:
+    print(count)
+    count += 1
+```
+
+Output:
+```
+0
+1
+2
+3
+4
+```
+
+Mental model:
+```
+Check condition
+      ↓
+   True?
+   /   \
+ Yes    No
+  ↓      ↓
+Execute  END
+  ↓
+Check again
+
+```
+
+### 26. break
+You can terminate a loop early.
+
+```python
+for number in range(10):
+    if number == 5:
+        break
+
+    print(number)
+```
+
+Output:
+```
+0
+1
+2
+3
+4
+```
+
+Once:
+```python
+number == 5
+```
+becomes true:
+```python
+break
+```
+terminates the loop.
+
+
+### 27. continue
+continue skips the current iteration.
+```python
+for number in range(5):
+    if number == 2:
+        continue
+
+    print(number)
+```
+Output:
+```
+0
+1
+3
+4
+```
+The iteration where number == 2 is skipped.
+
+### Connecting This to Agentic AI
+This is where I want you to start thinking like an AI engineer.
+
+Imagine:
+```python
+documents = retrieve_documents()
+```
+Then:
+```python
+if documents:
+    answer = generate_answer(documents)
+else:
+    answer = "I couldn't find relevant information."
+```
+That's already an extremely simplified RAG decision.
+
+Now imagine:
+```python
+for document in documents:
+    ...
+```
+You're processing retrieved documents.
+
+And:
+```python
+if tool_required:
+    call_tool()
+else:
+    answer_directly()
+```
+That's an agentic decision.
+
+Eventually LangGraph will formalize these decisions into:
+```
+STATE
+  ↓
+NODE
+  ↓
+CONDITION
+  ↓
+EDGE
+  ↓
+NEXT NODE
+```
+So today's Python fundamentals are directly feeding into your future Agentic AI understanding.
+
+
+#### Lesson 2 Exercises
+
+Exercise 1 - Arithmetic
+
+Create:
+```python
+a = 20
+b = 6
+```
+Print the result of:
+```
++
+-
+*
+/
+/
+//
+%
+**
+```
+Also print the type of / and //.
+
+
